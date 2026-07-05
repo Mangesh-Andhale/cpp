@@ -14,6 +14,8 @@ public:
     }
 };
 
+// Print N to 1 using Recursion
+
 class Solution {
 public:
     void printNos(int n) {
@@ -27,5 +29,20 @@ public:
 
         // Recursive call
         printNos(n - 1);
+    }
+};
+
+// Sum of First N Numbers
+
+class Solution {
+public:
+    int sumOfFirstN(int n) {
+        // Base case
+        if (n == 0) {
+            return 0;
+        }
+
+        // Recursive case
+        return n + sumOfFirstN(n - 1);
     }
 };
