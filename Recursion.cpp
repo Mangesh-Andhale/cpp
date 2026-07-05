@@ -61,3 +61,22 @@ public:
         return n * factorial(n - 1);
     }
 };
+
+	
+// Reverse an array
+
+class Solution {
+public:
+    void reverseArray(vector<int>& arr, int left, int right) {
+        // Base case
+        if (left >= right) {
+            return;
+        }
+
+        // Swap elements
+        swap(arr[left], arr[right]);
+
+        // Recursive call
+        reverseArray(arr, left + 1, right - 1);
+    }
+};
